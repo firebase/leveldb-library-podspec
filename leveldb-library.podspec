@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.7'
 
   s.source       =  { 
-    :git => 'https://github.com/matehat/leveldb.git',
+    :git => 'https://github.com/google/leveldb.git',
     # TODO(wilhuff) Match tag to repo version with :tag => s.version.to_s
-    :tag => 'v1.18.1'
+    :tag => 'v1.18'
   }
 
   s.requires_arc = false
