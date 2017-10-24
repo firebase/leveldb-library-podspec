@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'leveldb-library'
-  s.version      =  '1.18.3'
+  s.version      =  '1.19'
   s.license      =  'New BSD'
   s.summary      =  'A fast key-value storage library '
   s.description  =  'LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.'
@@ -12,8 +12,7 @@ Pod::Spec.new do |s|
 
   s.source       =  { 
     :git => 'https://github.com/google/leveldb.git',
-    # TODO(wilhuff) Match tag to repo version with :tag => s.version.to_s
-    :tag => 'v1.18'
+    :tag => 'v1.19'
   }
 
   s.requires_arc = false
