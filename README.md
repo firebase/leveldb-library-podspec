@@ -12,7 +12,7 @@ the 1.2.1.beta.1 with its new option --skip-import-validation.
 ## Updating the podspec (assuming the library is not changing)
 
   * Update s.version below to the next semantic version
-  * pod spec lint leveldb-firebase.podspec --skip-import-validation
+  * pod spec lint leveldb-library.podspec --skip-import-validation
     * Should be one warning - WARN  | source: The version should be included in the Git tag.
   * Do pull request
-  * pod trunk push leveldb-firebase.podspec --skip-import-validation  --allow-warnings
+  * pod trunk push leveldb-library.podspec --skip-import-validation  --allow-warnings
