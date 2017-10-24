@@ -42,6 +42,7 @@ Pod::Spec.new do |s|
   s.exclude_files = [
     "**/*_test.cc",
     "**/*_bench.cc",
+    "db/leveldbutil.cc",
     "port/win"
   ]
 end
