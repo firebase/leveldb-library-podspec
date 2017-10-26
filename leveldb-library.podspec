@@ -21,20 +21,17 @@ Pod::Spec.new do |s|
 
   s.xcconfig = {
     'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/leveldb-library" "${PODS_ROOT}/leveldb-library/include"',
+
     # Disable warnings introduced by Xcode 8.3 and Xcode 9
     'WARNING_CFLAGS' => '-Wno-shorten-64-to-32 -Wno-comma -Wno-unreachable-code -Wno-conditional-uninitialized',
   }
 
   s.header_dir = "leveldb"
   s.source_files = [
-    "db/*.{cc}",
-    "db/*.h",
-    "port/*.{cc}",
-    "port/*.h",
-    "table/*.{cc}",
-    "table/*.h",
-    "util/*.{cc}",
-    "util/*.h",
+    "db/*.{cc,h}",
+    "port/*.{cc,h}",
+    "table/*.{cc,h}",
+    "util/*.{cc,h}",
     "include/leveldb/*.h"
   ]
 
