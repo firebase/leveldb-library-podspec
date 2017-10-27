@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.xcconfig = {
     'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/leveldb-library" ' +
-                              '"${PODS_ROOT}/leveldb-library/include"',
+                             '"${PODS_ROOT}/leveldb-library/include"',
 
     # Disable warnings introduced by Xcode 8.3 and Xcode 9
     'WARNING_CFLAGS' => '-Wno-shorten-64-to-32 -Wno-comma -Wno-unreachable-code ' +
