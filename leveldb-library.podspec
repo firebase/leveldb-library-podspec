@@ -3,7 +3,8 @@ Pod::Spec.new do |s|
   s.version      =  '1.20'
   s.license      =  'New BSD'
   s.summary      =  'A fast key-value storage library '
-  s.description  =  'LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.'
+  s.description  =  'LevelDB is a fast key-value storage library written at Google that provides ' +
+                    'an ordered mapping from string keys to string values.'
   s.homepage     =  'https://github.com/google/leveldb'
   s.authors      =  'The LevelDB Authors'
 
@@ -20,10 +21,12 @@ Pod::Spec.new do |s|
   s.compiler_flags = '-DOS_MACOSX', '-DLEVELDB_PLATFORM_POSIX'
 
   s.xcconfig = {
-    'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/leveldb-library" "${PODS_ROOT}/leveldb-library/include"',
+    'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/leveldb-library" ' +
+                              '"${PODS_ROOT}/leveldb-library/include"',
 
     # Disable warnings introduced by Xcode 8.3 and Xcode 9
-    'WARNING_CFLAGS' => '-Wno-shorten-64-to-32 -Wno-comma -Wno-unreachable-code -Wno-conditional-uninitialized',
+    'WARNING_CFLAGS' => '-Wno-shorten-64-to-32 -Wno-comma -Wno-unreachable-code ' +
+                        '-Wno-conditional-uninitialized',
   }
 
   s.header_dir = "leveldb"
