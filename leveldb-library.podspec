@@ -27,6 +27,9 @@ Pod::Spec.new do |s|
     # Disable warnings introduced by Xcode 8.3 and Xcode 9
     'WARNING_CFLAGS' => '-Wno-shorten-64-to-32 -Wno-comma -Wno-unreachable-code ' +
                         '-Wno-conditional-uninitialized',
+
+    # Prevent naming conflicts between leveldb headers and system headers
+    'USE_HEADERMAP' => 'No',
   }
 
   s.header_dir = "leveldb"
