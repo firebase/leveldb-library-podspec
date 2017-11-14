@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
+  s.tvos.deployment_target = '10.0'
 
   s.source       =  { 
     :git => 'https://github.com/google/leveldb.git',
@@ -25,8 +26,9 @@ Pod::Spec.new do |s|
                              '"${PODS_ROOT}/leveldb-library/include"',
 
     # Disable warnings introduced by Xcode 8.3 and Xcode 9
+    # The deprecated-declarations is for OSMemoryBarrier on tvOS
     'WARNING_CFLAGS' => '-Wno-shorten-64-to-32 -Wno-comma -Wno-unreachable-code ' +
-                        '-Wno-conditional-uninitialized',
+                        '-Wno-conditional-uninitialized -Wno-deprecated-declarations',
 
     # Prevent naming conflicts between leveldb headers and system headers
     'USE_HEADERMAP' => 'No',
