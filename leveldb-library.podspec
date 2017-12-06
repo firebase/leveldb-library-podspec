@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.compiler_flags = '-DOS_MACOSX', '-DLEVELDB_PLATFORM_POSIX'
 
-  s.xcconfig = {
+  s.pod_target_xcconfig = {
     'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/leveldb-library" ' +
                              '"${PODS_ROOT}/leveldb-library/include"',
 
