@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'leveldb-library'
-  s.version      =  '1.20'
+  s.version      =  '1.22'
   s.license      =  'New BSD'
   s.summary      =  'A fast key-value storage library '
   s.description  =  'LevelDB is a fast key-value storage library written at Google that provides ' +
@@ -14,14 +14,15 @@ Pod::Spec.new do |s|
 
   s.source       =  { 
     :git => 'https://github.com/google/leveldb.git',
-    :tag => 'v' + s.version.to_s
+    :tag => s.version.to_s
   }
 
   s.requires_arc = false
 
-  s.compiler_flags = '-DOS_MACOSX', '-DLEVELDB_PLATFORM_POSIX'
-
   s.pod_target_xcconfig = {
+    'GCC_PREPROCESSOR_DEFINITIONS' => 'LEVELDB_IS_BIG_ENDIAN=0 ' +
+                                      'LEVELDB_PLATFORM_POSIX ' +
+                                      'HAVE_FULLFSYNC=1',
     'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/leveldb-library" ' +
                              '"${PODS_ROOT}/leveldb-library/include"',
 
@@ -51,7 +52,8 @@ Pod::Spec.new do |s|
     "**/*_test.cc",
     "**/*_bench.cc",
     "db/leveldbutil.cc",
-    "port/win"
+    "util/env_windows.cc",
+    "util/testutil.cc"
   ]
 
   s.library = 'c++'
