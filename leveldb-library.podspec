@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'leveldb-library'
-  s.version      =  '1.22'
+  s.version      =  '1.22.1'
   s.license      =  'New BSD'
   s.summary      =  'A fast key-value storage library '
   s.description  =  'LevelDB is a fast key-value storage library written at Google that provides ' +
@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
   s.tvos.deployment_target = '10.0'
+  s.watchos.deployment_target = '6.0'
 
   s.source       =  { 
     :git => 'https://github.com/google/leveldb.git',
