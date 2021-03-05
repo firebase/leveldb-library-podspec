@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.source       =  { 
     :git => 'https://github.com/google/leveldb.git',
-    :tag => s.version.to_s
+    :tag => '1.22'
   }
 
   s.requires_arc = false
